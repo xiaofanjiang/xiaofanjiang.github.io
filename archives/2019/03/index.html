@@ -172,8 +172,16 @@
             <li class="menu-item menu-item-home">
 
               <a href="/" rel="section"><i
-                                                                                                class="menu-item-icon fa fa-fw fa-home"></i>
+                                                                                                class="menu-item-icon fa fa-fw fa-home /"></i>
                 <br>首页</a>
+
+            </li>
+
+            <li class="menu-item menu-item-categories">
+
+              <a href="/categories/" rel="section"><i
+                                                                                                class="menu-item-icon fa fa-fw fa-th"></i>
+                <br>分类</a>
 
             </li>
 
@@ -182,14 +190,6 @@
               <a href="/archives/" rel="section"><i
                                                                                                 class="menu-item-icon fa fa-fw fa-archive"></i>
                 <br>归档</a>
-
-            </li>
-
-            <li class="menu-item menu-item-照片">
-
-              <a href="/photos/" rel="section"><i
-                                                                                                class="menu-item-icon fa fa-fw fa-th"></i>
-                <br>照片</a>
 
             </li>
 
@@ -320,7 +320,7 @@
                   </header>
                 </article>
 
-                <article class="post post-type-categories" itemscope
+                <article class="post post-type-normal" itemscope
                                                                                                 itemtype="http://schema.org/Article">
                   <header class="post-header">
 
@@ -390,9 +390,11 @@
 
                   <div class="site-state-item site-state-categories">
 
-                    <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">分类</span>
+                    <a href="/categories/">
 
+                      <span class="site-state-item-count">3</span>
+                      <span class="site-state-item-name">分类</span>
+                    </a>
                   </div>
 
                   <div class="site-state-item site-state-tags">

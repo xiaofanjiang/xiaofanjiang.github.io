@@ -77,16 +77,12 @@
 
   </script>
 
-  <meta name="description"
-                                                                                  content="#MySQL数据库优化总结  ​   对于一个以数据为中心的应用，数据库的好坏直接影响到程序的性能，因此数据库性能至关重要。一般来说，要保证数据库的效率，要做好以下四个方面的工作：数据库设计、sql语句优化、数据库参数配置、恰当的硬件资源和操作系统，这个顺序也表现了这四个工作对性能影响的大小。下面我们逐个阐明：  ​ 一、数据库设计 　　适度的反范式,注意是适度的 　　我们都知道三范式，基于三范式">
   <meta name="keywords" content="中国&#x2F;深圳">
   <meta property="og:type" content="article">
   <meta property="og:title" content="MySQL数据库优化">
   <meta property="og:url"
                                                                                   content="https://xiaofanjiang.github.io/2019/03/15/mysql优化/index.html">
   <meta property="og:site_name" content="江小凡的博客">
-  <meta property="og:description"
-                                                                                  content="#MySQL数据库优化总结  ​   对于一个以数据为中心的应用，数据库的好坏直接影响到程序的性能，因此数据库性能至关重要。一般来说，要保证数据库的效率，要做好以下四个方面的工作：数据库设计、sql语句优化、数据库参数配置、恰当的硬件资源和操作系统，这个顺序也表现了这四个工作对性能影响的大小。下面我们逐个阐明：  ​ 一、数据库设计 　　适度的反范式,注意是适度的 　　我们都知道三范式，基于三范式">
   <meta property="og:locale" content="zh-CN">
   <meta property="og:image"
                                                                                   content="http://image3.it168.com//2009/5/26/ed7e83a0-2bd3-45ba-b82b-acd491ac62f5.jpg">
@@ -104,11 +100,9 @@
                                                                                   content="http://image3.it168.com//2009/5/26/5ce43307-420c-45b0-98ed-a98be3bfae61.jpg">
   <meta property="og:image"
                                                                                   content="http://image3.it168.com//2009/5/26/77b40c6e-3739-4ec8-a586-a287f720b107.jpg">
-  <meta property="og:updated_time" content="2019-03-15T03:59:07.083Z">
+  <meta property="og:updated_time" content="2019-03-15T16:58:43.871Z">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="MySQL数据库优化">
-  <meta name="twitter:description"
-                                                                                  content="#MySQL数据库优化总结  ​   对于一个以数据为中心的应用，数据库的好坏直接影响到程序的性能，因此数据库性能至关重要。一般来说，要保证数据库的效率，要做好以下四个方面的工作：数据库设计、sql语句优化、数据库参数配置、恰当的硬件资源和操作系统，这个顺序也表现了这四个工作对性能影响的大小。下面我们逐个阐明：  ​ 一、数据库设计 　　适度的反范式,注意是适度的 　　我们都知道三范式，基于三范式">
   <meta name="twitter:image"
                                                                                   content="http://image3.it168.com//2009/5/26/ed7e83a0-2bd3-45ba-b82b-acd491ac62f5.jpg">
 
@@ -195,8 +189,16 @@
             <li class="menu-item menu-item-home">
 
               <a href="/" rel="section"><i
-                                                                                                class="menu-item-icon fa fa-fw fa-home"></i>
+                                                                                                class="menu-item-icon fa fa-fw fa-home /"></i>
                 <br>首页</a>
+
+            </li>
+
+            <li class="menu-item menu-item-categories">
+
+              <a href="/categories/" rel="section"><i
+                                                                                                class="menu-item-icon fa fa-fw fa-th"></i>
+                <br>分类</a>
 
             </li>
 
@@ -205,14 +207,6 @@
               <a href="/archives/" rel="section"><i
                                                                                                 class="menu-item-icon fa fa-fw fa-archive"></i>
                 <br>归档</a>
-
-            </li>
-
-            <li class="menu-item menu-item-照片">
-
-              <a href="/photos/" rel="section"><i
-                                                                                                class="menu-item-icon fa fa-fw fa-th"></i>
-                <br>照片</a>
 
             </li>
 
@@ -291,8 +285,19 @@
 
                         <span class="post-meta-item-text">发表于</span>
 
-                        <time title="创建时间：2019-03-15 11:45:46 / 修改时间：11:59:07" itemprop="dateCreated datePublished"
+                        <time title="创建时间：2019-03-15 11:45:46" itemprop="dateCreated datePublished"
                                                                                                         datetime="2019-03-15T11:45:46+08:00">2019-03-15</time>
+
+                        <span class="post-meta-divider">|</span>
+
+                        <span class="post-meta-item-icon">
+                          <i class="fa fa-calendar-check-o"></i>
+                        </span>
+
+                        <span class="post-meta-item-text">更新于</span>
+
+                        <time title="修改时间：2019-03-16 00:58:43" itemprop="dateModified"
+                                                                                                        datetime="2019-03-16T00:58:43+08:00">2019-03-16</time>
 
                       </span>
 
@@ -342,6 +347,8 @@
 
                   <div class="post-body" itemprop="articleBody">
 
+                    <hr>
+                    <a id="more"></a>
                     <p>#<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vdmlsbGlvbi9hcmNoaXZlLzIwMDkvMDcvMjMvMTg5Mzc2NS5odG1s"
                                                                                                       title="https://www.cnblogs.com/villion/archive/2009/07/23/1893765.html">MySQL数据库优化总结<i
                                                                                                         class="fa fa-external-link"></i></span>
@@ -707,9 +714,11 @@
 
                   <div class="site-state-item site-state-categories">
 
-                    <span class="site-state-item-count">3</span>
-                    <span class="site-state-item-name">分类</span>
+                    <a href="/categories/">
 
+                      <span class="site-state-item-count">3</span>
+                      <span class="site-state-item-name">分类</span>
+                    </a>
                   </div>
 
                   <div class="site-state-item site-state-tags">
