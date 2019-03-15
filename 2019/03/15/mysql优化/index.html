@@ -77,19 +77,43 @@
 
   </script>
 
-  <meta name="description" content="NO WHERE TO BE MEMORIAL">
-  <meta name="keywords" content="python&#x2F;docker&#x2F;mysql">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="江 小 凡">
-  <meta property="og:url" content="https://xiaofanjiang.github.io/index.html">
+  <meta name="description"
+                                                                                  content="#MySQL数据库优化总结  ​   对于一个以数据为中心的应用，数据库的好坏直接影响到程序的性能，因此数据库性能至关重要。一般来说，要保证数据库的效率，要做好以下四个方面的工作：数据库设计、sql语句优化、数据库参数配置、恰当的硬件资源和操作系统，这个顺序也表现了这四个工作对性能影响的大小。下面我们逐个阐明：  ​ 一、数据库设计 　　适度的反范式,注意是适度的 　　我们都知道三范式，基于三范式">
+  <meta name="keywords" content="中国&#x2F;深圳">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="MySQL数据库优化">
+  <meta property="og:url"
+                                                                                  content="https://xiaofanjiang.github.io/2019/03/15/mysql优化/index.html">
   <meta property="og:site_name" content="江 小 凡">
-  <meta property="og:description" content="NO WHERE TO BE MEMORIAL">
+  <meta property="og:description"
+                                                                                  content="#MySQL数据库优化总结  ​   对于一个以数据为中心的应用，数据库的好坏直接影响到程序的性能，因此数据库性能至关重要。一般来说，要保证数据库的效率，要做好以下四个方面的工作：数据库设计、sql语句优化、数据库参数配置、恰当的硬件资源和操作系统，这个顺序也表现了这四个工作对性能影响的大小。下面我们逐个阐明：  ​ 一、数据库设计 　　适度的反范式,注意是适度的 　　我们都知道三范式，基于三范式">
   <meta property="og:locale" content="zh-CN">
+  <meta property="og:image"
+                                                                                  content="http://image3.it168.com//2009/5/26/ed7e83a0-2bd3-45ba-b82b-acd491ac62f5.jpg">
+  <meta property="og:image"
+                                                                                  content="http://image3.it168.com//2009/5/26/b0f2c029-798d-49d3-b1dc-7b086aab2da6.jpg">
+  <meta property="og:image"
+                                                                                  content="http://image3.it168.com//2009/5/26/4f050857-948a-499a-b1e8-019291ca4b97.jpg">
+  <meta property="og:image"
+                                                                                  content="http://image3.it168.com//2009/5/26/829648ab-d03f-40c7-8bde-bd0b231bcf23.jpg">
+  <meta property="og:image"
+                                                                                  content="http://image3.it168.com//2009/5/26/f47cfcc0-bdb1-461b-bc3b-d492520f882b.jpg">
+  <meta property="og:image"
+                                                                                  content="http://image3.it168.com//2009/5/26/fe387d07-6f2c-4e50-823e-0844b5da27cc.jpg">
+  <meta property="og:image"
+                                                                                  content="http://image3.it168.com//2009/5/26/5ce43307-420c-45b0-98ed-a98be3bfae61.jpg">
+  <meta property="og:image"
+                                                                                  content="http://image3.it168.com//2009/5/26/77b40c6e-3739-4ec8-a586-a287f720b107.jpg">
+  <meta property="og:updated_time" content="2019-03-15T03:59:07.083Z">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="江 小 凡">
-  <meta name="twitter:description" content="NO WHERE TO BE MEMORIAL">
+  <meta name="twitter:title" content="MySQL数据库优化">
+  <meta name="twitter:description"
+                                                                                  content="#MySQL数据库优化总结  ​   对于一个以数据为中心的应用，数据库的好坏直接影响到程序的性能，因此数据库性能至关重要。一般来说，要保证数据库的效率，要做好以下四个方面的工作：数据库设计、sql语句优化、数据库参数配置、恰当的硬件资源和操作系统，这个顺序也表现了这四个工作对性能影响的大小。下面我们逐个阐明：  ​ 一、数据库设计 　　适度的反范式,注意是适度的 　　我们都知道三范式，基于三范式">
+  <meta name="twitter:image"
+                                                                                  content="http://image3.it168.com//2009/5/26/ed7e83a0-2bd3-45ba-b82b-acd491ac62f5.jpg">
 
-  <link rel="canonical" href="https://xiaofanjiang.github.io/">
+  <link rel="canonical"
+                                                                                  href="https://xiaofanjiang.github.io/2019/03/15/mysql优化/">
 
   <script id="page.configurations">
     CONFIG.page = {
@@ -98,7 +122,7 @@
 
   </script>
 
-  <title>江 小 凡</title>
+  <title>MySQL数据库优化 | 江 小 凡</title>
 
   <noscript>
     <style>
@@ -137,8 +161,7 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <header id="header" class="header" itemscope
                                                                                     itemtype="http://schema.org/WPHeader">
@@ -169,7 +192,7 @@
 
           <ul id="menu" class="menu">
 
-            <li class="menu-item menu-item-home menu-item-active">
+            <li class="menu-item menu-item-home">
 
               <a href="/" rel="section"><i
                                                                                                 class="menu-item-icon fa fa-fw fa-home"></i>
@@ -216,7 +239,7 @@
 
           <div id="content" class="content">
 
-            <section id="posts" class="posts-expand">
+            <div id="posts" class="posts-expand">
 
               <article class="post post-type-categories" itemscope
                                                                                               itemtype="http://schema.org/Article">
@@ -240,10 +263,7 @@
 
                   <header class="post-header">
 
-                    <h2 class="post-title" itemprop="name headline">
-
-                      <a href="/2019/03/15/mysql优化/" class="post-title-link"
-                                                                                                      itemprop="url">MySQL数据库优化</a>
+                    <h2 class="post-title" itemprop="name headline">MySQL数据库优化
 
                     </h2>
 
@@ -549,260 +569,74 @@
 
                   <div>
 
-                  </div>
+                    <div>
 
-                  <footer class="post-footer">
-
-                    <div class="post-eof"></div>
-
-                  </footer>
-                </div>
-
-              </article>
-
-              <article class="post post-type-categories" itemscope
-                                                                                              itemtype="http://schema.org/Article">
-
-                <div class="post-block">
-                  <link itemprop="mainEntityOfPage"
-                                                                                                  href="https://xiaofanjiang.github.io/2019/03/14/My-first-blogs/">
-
-                  <span hidden itemprop="author" itemscope
-                                                                                                  itemtype="http://schema.org/Person">
-                    <meta itemprop="name" content="江小凡">
-                    <meta itemprop="description"
-                                                                                                    content="NO WHERE TO BE MEMORIAL">
-                    <meta itemprop="image" content="/images/avatar.png">
-                  </span>
-
-                  <span hidden itemprop="publisher" itemscope
-                                                                                                  itemtype="http://schema.org/Organization">
-                    <meta itemprop="name" content="江 小 凡">
-                  </span>
-
-                  <header class="post-header">
-
-                    <h2 class="post-title" itemprop="name headline">
-
-                      <a href="/2019/03/14/My-first-blogs/" class="post-title-link"
-                                                                                                      itemprop="url">My
-                        first blogs</a>
-
-                    </h2>
-
-                    <div class="post-meta">
-                      <span class="post-time">
-
-                        <span class="post-meta-item-icon">
-                          <i class="fa fa-calendar-o"></i>
-                        </span>
-
-                        <span class="post-meta-item-text">发表于</span>
-
-                        <time title="创建时间：2019-03-14 10:28:26" itemprop="dateCreated datePublished"
-                                                                                                        datetime="2019-03-14T10:28:26+08:00">2019-03-14</time>
-
-                        <span class="post-meta-divider">|</span>
-
-                        <span class="post-meta-item-icon">
-                          <i class="fa fa-calendar-check-o"></i>
-                        </span>
-
-                        <span class="post-meta-item-text">更新于</span>
-
-                        <time title="修改时间：2019-03-15 12:01:37" itemprop="dateModified"
-                                                                                                        datetime="2019-03-15T12:01:37+08:00">2019-03-15</time>
-
-                      </span>
-
-                      <span class="post-category">
-
-                        <span class="post-meta-divider">|</span>
-
-                        <span class="post-meta-item-icon">
-                          <i class="fa fa-folder-o"></i>
-                        </span>
-
-                        <span class="post-meta-item-text">分类于</span>
-
-                        <span itemprop="about" itemscope
-                                                                                                        itemtype="http://schema.org/Thing"><a
-                                                                                                          href="/categories/life/"
-                                                                                                          itemprop="url"
-                                                                                                          rel="index"><span
-                                                                                                            itemprop="name">life</span></a></span>
-
-                      </span>
-
-                      <span class="post-comments-count">
-                        <span class="post-meta-divider">|</span>
-                        <span class="post-meta-item-icon">
-                          <i class="fa fa-comment-o"></i>
-                        </span>
-
-                        <span class="post-meta-item-text">评论数：</span>
-                        <a href="/2019/03/14/My-first-blogs/#comments"
-                                                                                                        itemprop="discussionUrl">
-                          <span class="post-comments-count valine-comment-count" data-xid="/2019/03/14/My-first-blogs/"
-                                                                                                          itemprop="commentCount"></span>
-                        </a>
-                      </span>
+                      <div
+                                                                                                      style="text-align:center;color: #ccc;font-size:14px;">
+                        -------------本文结束<i
+                                                                                                        class="fa fa-paw"></i>感谢您的阅读-------------
+                      </div>
 
                     </div>
-                  </header>
-
-                  <div class="post-body" itemprop="articleBody">
-
-                    <h2 id="HELLO-WORLD"><a href="#HELLO-WORLD" class="headerlink"
-                                                                                                      title="HELLO WORLD"></a>HELLO
-                      WORLD</h2>
-                    <p>
-                      今天我打算开通我自己的个人博客这个博客主要为静态页面展示.今天先这样,接下来我会把我的一些工作和生活分享在这个博客中.
-                    </p>
-                    <h2 id="DEMO"><a href="#DEMO" class="headerlink"
-                                                                                                      title="DEMO"></a>DEMO
-                    </h2>
-                    <p>下面是我手写的一个快速排序算法:</p>
-                    <figure class="highlight python">
-                      <table>
-                        <tr>
-                          <td class="gutter">
-                            <pre><span class="line">1</span><br></pre>
-                          </td>
-                          <td class="code">
-                            <pre><span class="line">quick_sort=<span class="keyword">lambda</span> array:array <span class="keyword">if</span> len(array)&lt;=<span class="number">1</span> <span class="keyword">else</span> quick_sort([i <span class="keyword">for</span> i <span class="keyword">in</span> array[<span class="number">1</span>:] <span class="keyword">if</span> i&lt;=array[<span class="number">0</span>]]) + [array[<span class="number">0</span>]] + quick_sort([i <span class="keyword">for</span> i <span class="keyword">in</span> array[<span class="number">1</span>:] <span class="keyword">if</span> i &gt; array[<span class="number">0</span>]])</span><br></pre>
-                          </td>
-                        </tr>
-                      </table>
-                    </figure>
-                    <h2 id="THE-END"><a href="#THE-END" class="headerlink"
-                                                                                                      title="THE END"></a>THE
-                      END</h2>
 
                   </div>
 
                   <div>
 
+                    <ul class="post-copyright">
+                      <li class="post-copyright-author">
+                        <strong>本文作者： </strong>江小凡</li>
+                      <li class="post-copyright-link">
+                        <strong>本文链接：</strong>
+
+                        <a href="https://xiaofanjiang.github.io/2019/03/15/mysql优化/"
+                                                                                                        title="MySQL数据库优化">https://xiaofanjiang.github.io/2019/03/15/mysql优化/</a>
+                      </li>
+                      <li class="post-copyright-license">
+                        <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl"
+                                                                                                        data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i
+                                                                                                          class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span>
+                        许可协议。转载请注明出处！</li>
+                    </ul>
+
                   </div>
 
                   <footer class="post-footer">
 
-                    <div class="post-eof"></div>
+                    <div class="post-tags">
 
-                  </footer>
-                </div>
-
-              </article>
-
-              <article class="post post-type-categories" itemscope
-                                                                                              itemtype="http://schema.org/Article">
-
-                <div class="post-block">
-                  <link itemprop="mainEntityOfPage"
-                                                                                                  href="https://xiaofanjiang.github.io/2019/03/14/categories/">
-
-                  <span hidden itemprop="author" itemscope
-                                                                                                  itemtype="http://schema.org/Person">
-                    <meta itemprop="name" content="江小凡">
-                    <meta itemprop="description"
-                                                                                                    content="NO WHERE TO BE MEMORIAL">
-                    <meta itemprop="image" content="/images/avatar.png">
-                  </span>
-
-                  <span hidden itemprop="publisher" itemscope
-                                                                                                  itemtype="http://schema.org/Organization">
-                    <meta itemprop="name" content="江 小 凡">
-                  </span>
-
-                  <header class="post-header">
-
-                    <h2 class="post-title" itemprop="name headline">
-
-                      <a href="/2019/03/14/categories/" class="post-title-link"
-                                                                                                      itemprop="url">categories</a>
-
-                    </h2>
-
-                    <div class="post-meta">
-                      <span class="post-time">
-
-                        <span class="post-meta-item-icon">
-                          <i class="fa fa-calendar-o"></i>
-                        </span>
-
-                        <span class="post-meta-item-text">发表于</span>
-
-                        <time title="创建时间：2019-03-14 17:18:46" itemprop="dateCreated datePublished"
-                                                                                                        datetime="2019-03-14T17:18:46+08:00">2019-03-14</time>
-
-                        <span class="post-meta-divider">|</span>
-
-                        <span class="post-meta-item-icon">
-                          <i class="fa fa-calendar-check-o"></i>
-                        </span>
-
-                        <span class="post-meta-item-text">更新于</span>
-
-                        <time title="修改时间：2019-03-15 11:42:20" itemprop="dateModified"
-                                                                                                        datetime="2019-03-15T11:42:20+08:00">2019-03-15</time>
-
-                      </span>
-
-                      <span class="post-category">
-
-                        <span class="post-meta-divider">|</span>
-
-                        <span class="post-meta-item-icon">
-                          <i class="fa fa-folder-o"></i>
-                        </span>
-
-                        <span class="post-meta-item-text">分类于</span>
-
-                        <span itemprop="about" itemscope
-                                                                                                        itemtype="http://schema.org/Thing"><a
-                                                                                                          href="/categories/Testing/"
-                                                                                                          itemprop="url"
-                                                                                                          rel="index"><span
-                                                                                                            itemprop="name">Testing</span></a></span>
-
-                      </span>
-
-                      <span class="post-comments-count">
-                        <span class="post-meta-divider">|</span>
-                        <span class="post-meta-item-icon">
-                          <i class="fa fa-comment-o"></i>
-                        </span>
-
-                        <span class="post-meta-item-text">评论数：</span>
-                        <a href="/2019/03/14/categories/#comments"
-                                                                                                        itemprop="discussionUrl">
-                          <span class="post-comments-count valine-comment-count" data-xid="/2019/03/14/categories/"
-                                                                                                          itemprop="commentCount"></span>
-                        </a>
-                      </span>
+                      <a href="/tags/中国-深圳/" rel="tag"><i class="fa fa-tag"></i>
+                        中国/深圳</a>
 
                     </div>
-                  </header>
 
-                  <div class="post-body" itemprop="articleBody">
+                    <div class="post-nav">
+                      <div class="post-nav-next post-nav-item">
 
-                  </div>
+                        <a href="/2019/03/14/categories/" rel="next"
+                                                                                                        title="categories">
+                          <i class="fa fa-chevron-left"></i> categories
+                        </a>
 
-                  <div>
+                      </div>
 
-                  </div>
+                      <span class="post-nav-divider"></span>
 
-                  <footer class="post-footer">
+                      <div class="post-nav-prev post-nav-item">
 
-                    <div class="post-eof"></div>
+                      </div>
+                    </div>
 
                   </footer>
                 </div>
 
               </article>
 
-            </section>
+            </div>
 
+          </div>
+
+          <div class="comments" id="comments">
           </div>
 
         </div>
@@ -947,6 +781,9 @@
   <script src="/js/src/affix.js?v=7.0.1"></script>
 
   <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+  <script src="/js/src/post-details.js?v=7.0.1"></script>
 
   <script src="/js/src/next-boot.js?v=7.0.1"></script>
 
