@@ -80,16 +80,16 @@
 
   <meta name="keywords" content="中国&#x2F;深圳">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="MySQL优化第二篇">
+  <meta property="og:title" content="MySQL常用命令">
   <meta property="og:url"
-                                                                                  content="https://jxiaof.com/2019/03/15/MySQL优化第二篇/index.html">
+                                                                                  content="https://jxiaof.com/2019/03/18/MySQL常用命令/index.html">
   <meta property="og:site_name" content="江小凡的博客">
   <meta property="og:locale" content="zh-CN">
-  <meta property="og:updated_time" content="2019-03-18T05:15:26.635Z">
+  <meta property="og:updated_time" content="2019-03-18T11:56:26.208Z">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="MySQL优化第二篇">
+  <meta name="twitter:title" content="MySQL常用命令">
 
-  <link rel="canonical" href="https://jxiaof.com/2019/03/15/MySQL优化第二篇/">
+  <link rel="canonical" href="https://jxiaof.com/2019/03/18/MySQL常用命令/">
 
   <script id="page.configurations">
     CONFIG.page = {
@@ -98,7 +98,7 @@
 
   </script>
 
-  <title>MySQL优化第二篇 | 江小凡的博客</title>
+  <title>MySQL常用命令 | 江小凡的博客</title>
 
   <noscript>
     <style>
@@ -265,7 +265,7 @@
 
                 <div class="post-block">
                   <link itemprop="mainEntityOfPage"
-                                                                                                  href="https://jxiaof.com/2019/03/15/MySQL优化第二篇/">
+                                                                                                  href="https://jxiaof.com/2019/03/18/MySQL常用命令/">
 
                   <span hidden itemprop="author" itemscope
                                                                                                   itemtype="http://schema.org/Person">
@@ -281,7 +281,7 @@
 
                   <header class="post-header">
 
-                    <h2 class="post-title" itemprop="name headline">MySQL优化第二篇
+                    <h2 class="post-title" itemprop="name headline">MySQL常用命令
 
                     </h2>
 
@@ -294,19 +294,8 @@
 
                         <span class="post-meta-item-text">发表于</span>
 
-                        <time title="创建时间：2019-03-15 22:24:53" itemprop="dateCreated datePublished"
-                                                                                                        datetime="2019-03-15T22:24:53+08:00">2019-03-15</time>
-
-                        <span class="post-meta-divider">|</span>
-
-                        <span class="post-meta-item-icon">
-                          <i class="fa fa-calendar-check-o"></i>
-                        </span>
-
-                        <span class="post-meta-item-text">更新于</span>
-
-                        <time title="修改时间：2019-03-18 13:15:26" itemprop="dateModified"
-                                                                                                        datetime="2019-03-18T13:15:26+08:00">2019-03-18</time>
+                        <time title="创建时间：2019-03-18 19:32:30 / 修改时间：19:56:26" itemprop="dateCreated datePublished"
+                                                                                                        datetime="2019-03-18T19:32:30+08:00">2019-03-18</time>
 
                       </span>
 
@@ -322,10 +311,10 @@
 
                         <span itemprop="about" itemscope
                                                                                                         itemtype="http://schema.org/Thing"><a
-                                                                                                          href="/categories/MySQL/"
+                                                                                                          href="/categories/mysql/"
                                                                                                           itemprop="url"
                                                                                                           rel="index"><span
-                                                                                                            itemprop="name">MySQL</span></a></span>
+                                                                                                            itemprop="name">mysql</span></a></span>
 
                       </span>
 
@@ -336,9 +325,9 @@
                         </span>
 
                         <span class="post-meta-item-text">评论数：</span>
-                        <a href="/2019/03/15/MySQL优化第二篇/#comments"
+                        <a href="/2019/03/18/MySQL常用命令/#comments"
                                                                                                         itemprop="discussionUrl">
-                          <span class="post-comments-count valine-comment-count" data-xid="/2019/03/15/MySQL优化第二篇/"
+                          <span class="post-comments-count valine-comment-count" data-xid="/2019/03/18/MySQL常用命令/"
                                                                                                           itemprop="commentCount"></span>
                         </a>
                       </span>
@@ -358,185 +347,417 @@
 
                     <hr>
                     <a id="more"></a>
-                    <h4 id="1、选取最适用的字段属性"><a href="#1、选取最适用的字段属性" class="headerlink"
-                                                                                                      title="1、选取最适用的字段属性"></a>1、选取最适用的字段属性
-                    </h4>
-                    <p>
-                      MySQL可以很好的支持大数据量的存取，但是一般说来，数据库中的表越小，在它上面执行的查询也就会越快。因此，在创建表的时候，为了获得更好的性能，<code>我们可以将表中字段的宽度设得尽可能小。</code>
+                    <p>参考地址: <span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vYmx1ZWFsaW5lL3AvNzgzMjIxOS5odG1s"
+                                                                                                      title="https://www.cnblogs.com/bluealine/p/7832219.html">https://www.cnblogs.com/bluealine/p/7832219.html<i
+                                                                                                        class="fa fa-external-link"></i></span>
                     </p>
-                    <p>
-                      例如，在定义邮政编码这个字段时，如果将其设置为CHAR(255),显然给数据库增加了不必要的空间，甚至使用VARCHAR这种类型也是多余的，因为CHAR(6)就可以很好的完成任务了。同样的，如果可以的话，我们应该使用MEDIUMINT而不是BIGIN来定义整型字段。
+                    <h2 id="前言"><a href="#前言" class="headerlink"
+                                                                                                      title="前言"></a>前言
+                    </h2>
+                    <p>​ 大多数时候,
+                      涉及不熟悉的命令操作,一下就暴露出来自己是个菜鸡.毕竟见多识广,多练习,多理解是成长的关键.先写一点容易吸收的基本操作,其他以后边学习边更新.
                     </p>
-                    <p>另外一个提高效率的方法是在可能的情况下，<code>应该尽量把字段设置为NOT
-                        NULL</code>，这样在将来执行查询的时候，数据库不用去比较NULL值。<br>对于某些文本字段，例如“省份”或者“性别”，我们可以将它们定义为ENUM类型。因为在MySQL中，ENUM类型被当作数值型数据来处理，而数值型数据被处理起来的速度要比文本类型快得多。这样，我们又可以提高数据库的性能。
-                    </p>
-                    <p>
-                      ####2、使用连接（JOIN）来代替子查询(Sub-Queries)<br>MySQL从4.1开始支持SQL的子查询。这个技术可以使用SELECT语句来创建一个单列的查询结果，然后把这个结果作为过滤条件用在另一个查询中。例如，我们要将客户基本信息表中没有任何订单的客户删除掉，就可以利用子查询先从销售信息表中将所有发出订单的客户ID取出来，然后将结果传递给主查询，如下所示：
-                    </p>
-                    <figure class="highlight sql">
+                    <h4 id="INSERT-INTO-语句"><a href="#INSERT-INTO-语句" class="headerlink"
+                                                                                                      title="INSERT INTO 语句"></a>INSERT
+                      INTO 语句</h4>
+                    <figure class="highlight plain">
                       <table>
                         <tr>
                           <td class="code">
-                            <pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> customerinfo</span><br><span class="line"><span class="keyword">WHERE</span> CustomerID <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> CustomerID <span class="keyword">FROM</span> salesinfo)</span><br></pre>
+                            <pre><span class="line">INSERT INTO 表名称 VALUES (值1, 值2,....)  #插入新的行</span><br><span class="line">INSERT INTO Persons VALUES (&apos;Gates&apos;, &apos;Bill&apos;, &apos;Xuanwumen 10&apos;, &apos;Beijing&apos;)</span><br><span class="line">INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)   #指定特定字段插入</span><br></pre>
                           </td>
                         </tr>
                       </table>
                     </figure>
-                    <p>
-                      使用子查询可以一次性的完成很多逻辑上需要多个步骤才能完成的SQL操作，同时也可以避免事务或者表锁死，并且写起来也很容易。但是，有些情况下，子查询可以被更有效率的连接（JOIN）..替代。例如，假设我们要将所有没有订单记录的用户取出来，可以用下面这个查询完成：
-                    </p>
-                    <figure class="highlight sql">
+                    <h4 id="UPDATE-语句"><a href="#UPDATE-语句" class="headerlink"
+                                                                                                      title="UPDATE 语句"></a>UPDATE
+                      语句</h4>
+                    <figure class="highlight plain">
                       <table>
                         <tr>
                           <td class="code">
-                            <pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> customerinfo</span><br><span class="line"><span class="keyword">WHERE</span> CustomerID <span class="keyword">NOT</span> <span class="keyword">IN</span> (SELECTC ustomerID <span class="keyword">FROM</span> salesinfo)</span><br></pre>
+                            <pre><span class="line">UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值</span><br><span class="line">UPDATE Person SET FirstName = &apos;Fred&apos; WHERE LastName = &apos;Wilson&apos;  #更新某一行中间的一列</span><br><span class="line">UPDATE Person SET Address = &apos;Zhongshan 23&apos;, City = &apos;Nanjing&apos;</span><br><span class="line">WHERE LastName = &apos;Wilson&apos;     #更新某一行中间的多列</span><br></pre>
                           </td>
                         </tr>
                       </table>
                     </figure>
-                    <p>
-                      <code>如果使用连接（JOIN）..来完成这个查询工作，速度将会快很多。</code>尤其是当salesinfo表中对CustomerID建有索引的话，性能将会更好，查询如下：
-                    </p>
-                    <figure class="highlight sql">
+                    <h4 id="DELETE-语句"><a href="#DELETE-语句" class="headerlink"
+                                                                                                      title="DELETE 语句"></a>DELETE
+                      语句</h4>
+                    <figure class="highlight plain">
                       <table>
                         <tr>
                           <td class="code">
-                            <pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> customerinfo</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span> salesinfo <span class="keyword">ON</span> customerinfo.CustomerID=salesinfo.CustomerID</span><br><span class="line"><span class="keyword">WHERE</span> salesinfo.CustomerID <span class="keyword">ISNULL</span></span><br></pre>
+                            <pre><span class="line">DELETE FROM 表名称 WHERE 列名称 = 值</span><br><span class="line">DELETE FROM Person WHERE LastName = &apos;Wilson&apos;    #删除一行</span><br><span class="line">DELETE FROM table_name / DELETE * FROM table_name #删除多行</span><br></pre>
                           </td>
                         </tr>
                       </table>
                     </figure>
-                    <p>
-                      连接（JOIN）..之所以更有效率一些，是因为MySQL不需要在内存中创建临时表来完成这个逻辑上的需要两个步骤的查询工作。
-                    </p>
-                    <h4 id="3、使用联合-UNION-来代替手动创建的临时表"><a href="#3、使用联合-UNION-来代替手动创建的临时表" class="headerlink"
-                                                                                                      title="3、使用联合(UNION)来代替手动创建的临时表"></a>3、使用联合(UNION)来代替手动创建的临时表
-                    </h4>
-                    <p>
-                      MySQL从4.0的版本开始支持union查询，它可以把需要使用临时表的两条或更多的select查询合并的一个查询中。在客户端的查询会话结束的时候，临时表会被自动删除，从而保证数据库整齐、高效。使用union来创建查询的时候，我们只需要用UNION作为关键字把多个select语句连接起来就可以了，要注意的是所有select语句中的字段数目要想同。下面的例子就演示了一个使用UNION的查询。
-                    </p>
-                    <figure class="highlight sql">
+                    <h4 id="SELECT-DISTINCT-语句"><a href="#SELECT-DISTINCT-语句" class="headerlink"
+                                                                                                      title="SELECT DISTINCT 语句"></a>SELECT
+                      DISTINCT 语句</h4>
+                    <figure class="highlight plain">
                       <table>
                         <tr>
                           <td class="code">
-                            <pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">Name</span>,Phone <span class="keyword">FROM</span> <span class="keyword">client</span> <span class="keyword">UNION</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">Name</span>,BirthDate <span class="keyword">FROM</span> author <span class="keyword">UNION</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">Name</span>,Supplier <span class="keyword">FROM</span> product</span><br></pre>
+                            <pre><span class="line">SELECT DISTINCT 列名称 FROM 表名称</span><br><span class="line">SELECT DISTINCT Company FROM Orders</span><br></pre>
                           </td>
                         </tr>
                       </table>
                     </figure>
-                    <h4 id="4、事务"><a href="#4、事务" class="headerlink"
-                                                                                                      title="4、事务"></a>4、事务
-                    </h4>
-                    <p>
-                      尽管我们可以使用子查询（Sub-Queries）、连接（JOIN）和联合（UNION）来创建各种各样的查询，但不是所有的数据库操作都可以只用一条或少数几条SQL语句就可以完成的。更多的时候是需要用到一系列的语句来完成某种工作。但是在这种情况下，当这个语句块中的某一条语句运行出错的时候，整个语句块的操作就会变得不确定起来。设想一下，要把某个数据同时插入两个相关联的表中，可能会出现这样的情况：第一个表中成功更新后，数据库突然出现意外状况，造成第二个表中的操作没有完成，这样，就会造成数据的不完整，甚至会破坏数据库中的数据。要避免这种情况，就应该使用事务，它的作用是：要么语句块中每条语句都操作成功，要么都失败。换句话说，就是可以保持数据库中数据的一致性和完整性。事物以BEGIN关键字开始，COMMIT关键字结束。在这之间的一条SQL操作失败，那么，ROLLBACK命令就可以把数据库恢复到BEGIN开始之前的状态。
-                    </p>
-                    <figure class="highlight sql">
+                    <h2 id="备份数据库"><a href="#备份数据库" class="headerlink"
+                                                                                                      title="备份数据库"></a>备份数据库
+                    </h2>
+                    <hr>
+                    <p><strong>1.导出整个数据库</strong><br>导出文件默认是存在mysql\bin目录下<br>
+                      mysqldump -u 用户名 -p
+                      数据库名 &gt; 导出的文件名<br>​ <code>mysqldump -u user_name
+                        -p123456 database_name &gt;
+                        outfile_name.sql</code></p>
+                    <p><strong>2.导出一个表</strong><br> mysqldump -u 用户名 -p 数据库名
+                      表名&gt; 导出的文件名<br>​
+                      <code>mysqldump -u user_name -p database_name table_name
+                        &gt;
+                        outfile_name.sql</code></p>
+                    <p><strong>3.导出一个数据库结构</strong><br> <code>mysqldump -u
+                        user_name -p -d
+                        –add-drop-table database_name &gt;
+                        outfile_name.sql</code><br>​ -d 没有数据
+                      –add-drop-table 在每个create语句之前增加一个drop table</p>
+                    <p><strong>4.带语言参数导出</strong><br> <code>mysqldump -uroot -p
+                        –default-character-set=latin1 –set-charset=gbk –skip-opt
+                        database_name &gt;
+                        outfile_name.sql</code></p>
+                    <p><strong>例如，将aaa库备份到文件back_aaa中：</strong></p>
+                    <figure class="highlight shell">
                       <table>
                         <tr>
                           <td class="code">
-                            <pre><span class="line"><span class="keyword">BEGIN</span>; <span class="keyword">INSERT</span> <span class="keyword">INTO</span> salesinfo <span class="keyword">SET</span> CustomerID=<span class="number">14</span>; <span class="keyword">UPDATE</span> inventory <span class="keyword">SET</span> Quantity=<span class="number">11</span> <span class="keyword">WHERE</span> item=<span class="string">'book'</span>; <span class="keyword">COMMIT</span>;</span><br></pre>
+                            <pre><span class="line">　[root@test1 root]# cd　/home/data/mysql</span><br><span class="line">　[root@test1 mysql]# mysqldump -u root -p --opt aaa &gt; back_aaa</span><br></pre>
                           </td>
                         </tr>
                       </table>
                     </figure>
-                    <p>
-                      事务的另一个重要作用是当多个用户同时使用相同的数据源时，它可以利用锁定数据库的方法来为用户提供一种安全的访问方式，这样可以保证用户的操作不被其它的用户所干扰。
+                    <h2 id="连接MySQL"><a href="#连接MySQL" class="headerlink"
+                                                                                                      title="连接MySQL"></a>连接MySQL
+                    </h2>
+                    <hr>
+                    <h3 id="连接本地MySQL"><a href="#连接本地MySQL" class="headerlink"
+                                                                                                      title="连接本地MySQL"></a>连接本地MySQL
+                    </h3>
+                    <p>格式：<code>mysql -u用户名 －p用户密码</code> # 直接用密码和用户名连接本机mysql
                     </p>
-                    <h4 id="5、锁定表"><a href="#5、锁定表" class="headerlink"
-                                                                                                      title="5、锁定表"></a>5、锁定表
-                    </h4>
-                    <p>
-                      尽管事务是维护数据库完整性的一个非常好的方法，但却因为它的独占性，有时会影响数据库的性能，尤其是在很大的应用系统中。由于在事务执行的过程中，数据库将会被锁定，因此其它的用户请求只能暂时等待直到该事务结束。如果一个数据库系统只有少数几个用户来使用，事务造成的影响不会成为一个太大的问题；但假设有成千上万的用户同时访问一个数据库系统，例如访问一个电子商务网站，就会产生比较严重的响应延迟。
-                    </p>
-                    <p>
-                      其实，有些情况下我们可以通过锁定表的方法来获得更好的性能。下面的例子就用锁定表的方法来完成前面一个例子中事务的功能。
-                    </p>
-                    <figure class="highlight sql">
+                    <figure class="highlight plain">
                       <table>
                         <tr>
                           <td class="code">
-                            <pre><span class="line"><span class="keyword">LOCK</span> <span class="keyword">TABLE</span> inventory WRITE <span class="keyword">SELECT</span> Quantity <span class="keyword">FROM</span> inventory <span class="keyword">WHERE</span> Item=<span class="string">'book'</span>;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">UPDATE</span> inventory <span class="keyword">SET</span> Quantity=<span class="number">11</span> <span class="keyword">WHERE</span> Item=<span class="string">'book'</span>; UNLOCKTABLES</span><br></pre>
+                            <pre><span class="line">mysql -uroot -p</span><br></pre>
                           </td>
                         </tr>
                       </table>
                     </figure>
-                    <p>
-                      这里，我们用一个select语句取出初始数据，通过一些计算，用update语句将新值更新到表中。包含有WRITE关键字的LOCKTABLE语句可以保证在UNLOCKTABLES命令被执行之前，不会有其它的访问来对inventory进行插入、更新或者删除的操作。
-                    </p>
-                    <h4 id="6、使用外键"><a href="#6、使用外键" class="headerlink"
-                                                                                                      title="6、使用外键"></a>6、使用外键
-                    </h4>
-                    <p>
-                      <code>锁定表的方法可以维护数据的完整性，但是它却不能保证数据的关联性。这个时候我们就可以使用外键。</code>
-                    </p>
-                    <p>
-                      例如，外键可以保证每一条销售记录都指向某一个存在的客户。在这里，外键可以把customerinfo表中的CustomerID映射到salesinfo表中CustomerID，任何一条没有合法CustomerID的记录都不会被更新或插入到salesinfo中。
-                    </p>
-                    <figure class="highlight sql">
+                    <h3 id="连接远程MySQL"><a href="#连接远程MySQL" class="headerlink"
+                                                                                                      title="连接远程MySQL"></a>连接远程MySQL
+                    </h3>
+                    <p><strong>1、在服务器端开启远程访问</strong></p>
+                    <p>首先进入mysql数据库，然后输入下面两个命令：</p>
+                    <figure class="highlight plain">
                       <table>
                         <tr>
                           <td class="code">
-                            <pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> customerinfo(CustomerIDINT <span class="keyword">NOT</span> <span class="literal">NULL</span>,PRIMARYKEY(CustomerID))<span class="keyword">TYPE</span>=<span class="keyword">INNODB</span>;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> salesinfo( SalesIDNT <span class="keyword">NOT</span> <span class="literal">NULL</span>,CustomerIDINT <span class="keyword">NOT</span> <span class="literal">NULL</span>, PRIMARYKEY(CustomerID,SalesID),</span><br><span class="line">FOREIGNKEY(CustomerID) <span class="keyword">REFERENCES</span> customerinfo(CustomerID) <span class="keyword">ON</span> <span class="keyword">DELETE</span>  <span class="keyword">CASCADE</span>)<span class="keyword">TYPE</span>=<span class="keyword">INNODB</span>;</span><br></pre>
+                            <pre><span class="line">grant all privileges on *.* to &apos;root&apos;@&apos;%&apos; identified by &apos;password&apos;;</span><br><span class="line">flush privileges;</span><br></pre>
                           </td>
                         </tr>
                       </table>
                     </figure>
-                    <p>注意例子中的参数“ON DELETE
-                      CASCADE”。该参数保证当customerinfo表中的一条客户记录被删除的时候，salesinfo表中所有与该客户相关的记录也会被自动删除。如果要在MySQL中使用外键，一定要记住在创建表的时候将表的类型定义为事务安全表InnoDB类型。该类型不是MySQL表的默认类型。定义的方法是在CREATETABLE语句中加上TYPE=INNODB。如例中所示。
+                    <blockquote>
+                      <p>第一个<strong>*</strong>是数据库，可以改成允许访问的数据库名称</p>
+                      <p>第二个 是数据库的表名称，代表允许访问任意的表</p>
+                      <p>root代表远程登录使用的用户名，可以自定义</p>
+                      <p>%代表允许任意ip登录，如果你想指定特定的IP，可以把%替换掉就可以了</p>
+                      <p>password代表远程登录时使用的密码，可以自定义</p>
+                      <p>flush privileges;这是让权限立即生效</p>
+                    </blockquote>
+                    <p><strong>2、修改my.cnf配置文件</strong> (非常重要 位置: /etc/my.cnf)
                     </p>
-                    <h4 id="7、使用索引"><a href="#7、使用索引" class="headerlink"
-                                                                                                      title="7、使用索引"></a>7、使用索引
-                    </h4>
+                    <p>这个是mysql的配置文件，如果你无标题文章找不到在哪里的话，可以输入<code>find /* -name
+                        my.cnf</code>找到</p>
+                    <p>通过vim编辑该文件，找到<code>bind-address =
+                        127.0.0.1</code>这一句，然后在前面加个#号注释掉，保存退出</p>
+                    <p><strong>3、重启服务</strong></p>
+                    <figure class="highlight plain">
+                      <table>
+                        <tr>
+                          <td class="code">
+                            <pre><span class="line">service mysql restart</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
+                    <p><strong>4、在本地远程连接</strong></p>
+                    <p><code>mysql -h110.110.110.110 -u root -p 123;</code></p>
+                    <h3 id="加密连接远程数据库"><a href="#加密连接远程数据库" class="headerlink"
+                                                                                                      title="加密连接远程数据库"></a>加密连接远程数据库
+                    </h3>
+                    <blockquote>
+                      <p><strong>等待另一篇文章</strong></p>
+                    </blockquote>
+                    <h2 id="修改密码"><a href="#修改密码" class="headerlink"
+                                                                                                      title="修改密码"></a>修改密码
+                    </h2>
+                    <hr>
+                    <p>格式：<code>mysqladmin -u用户名 -p旧密码 password 新密码</code></p>
+                    <figure class="highlight plain">
+                      <table>
+                        <tr>
+                          <td class="code">
+                            <pre><span class="line">mysqladmin -u root  -password abc123              # 增加密码</span><br><span class="line">mysqladmin -u root -p abc123 password djg345      # 修改密码</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
+                    <h2 id="增加新用户"><a href="#增加新用户" class="headerlink"
+                                                                                                      title="增加新用户"></a>增加新用户
+                    </h2>
+                    <hr>
+                    <p>格式：<code>grant select on 数据库.* to 用户名@登录主机 identified by
+                        “密码”</code></p>
                     <p>
-                      索引是提高数据库性能的常用方法，它可以令数据库服务器以比没有索引快得多的速度检索特定的行，尤其是在查询语句当中包含有MAX(),MIN()和ORDERBY这些命令的时候，性能提高更为明显。
+                      <strong>增加一个用户test1密码为abc，让他可以在任何主机上登录，并对所有数据库有查询、插入、修改、删除的权限。首先用root用户连入MYSQL，然后键入以下命令：**</strong>
                     </p>
-                    <p>那该对哪些字段建立索引呢？</p>
+                    <figure class="highlight plain">
+                      <table>
+                        <tr>
+                          <td class="code">
+                            <pre><span class="line">grant select,insert,update,delete on *.* to [email=test1@”%]test1@”%[/email]” Identified by “abc”;</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
+                    <p>​
+                      但增加的用户是十分危险的，你想如某个人知道test1的密码，那么他就可以在internet上的任何一台电脑上登录你的mysql数据库并对你的数据可以为所欲为了，解决办法见2。
+                    </p>
                     <p>
-                      一般说来，索引应建立在那些将用于JOIN,WHERE判断和ORDERBY排序的字段上。尽量不要对数据库中某个含有大量重复的值的字段建立索引。对于一个ENUM类型的字段来说，出现大量重复值是很有可能的情况
+                      <strong>增加一个用户test2密码为abc,让他只可以在localhost上登录，并可以对数据库mydb进行查询、插入、修改、删除的操作（localhost指本地主机，即MYSQL数据库所在的那台主机）</strong>，<strong>这样用户即使用知道test2的密码，他也无法从internet上直接访问数据库，只能通过MYSQL主机上的web页来访问了。</strong>
                     </p>
-                    <p>
-                      例如customerinfo中的“province”..字段，在这样的字段上建立索引将不会有什么帮助；相反，还有可能降低数据库的性能。我们在创建表的时候可以同时创建合适的索引，也可以使用ALTERTABLE或CREATEINDEX在以后创建索引。此外，MySQL从版本3.23.23开始支持全文索引和搜索。全文索引在MySQL中是一个FULLTEXT类型索引，但仅能用于MyISAM类型的表。对于一个大的数据库，将数据装载到一个没有FULLTEXT索引的表中，然后再使用ALTERTABLE或CREATEINDEX创建索引，将是非常快的。但如果将数据装载到一个已经有FULLTEXT索引的表中，执行过程将会非常慢。
+                    <figure class="highlight plain">
+                      <table>
+                        <tr>
+                          <td class="code">
+                            <pre><span class="line">grant select,insert,update,delete on mydb.*** to [email=test2@localhost]test2@localhost[/email] identified by “abc”;</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
+                    <p><strong>如果你不想test2有密码，可以再打一个命令将密码消掉。</strong></p>
+                    <figure class="highlight plain">
+                      <table>
+                        <tr>
+                          <td class="code">
+                            <pre><span class="line">grant select,insert,update,delete on mydb.* to [email=test2@localhost]test2@localhost[/email] identified by “”;</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
+                    <h2 id="CURD"><a href="#CURD" class="headerlink"
+                                                                                                      title="CURD"></a>CURD
+                    </h2>
+                    <hr>
+                    <h3 id="创建表"><a href="#创建表" class="headerlink"
+                                                                                                      title="创建表"></a>创建表
+                    </h3>
+                    <p> 命令：<code>create table &lt;表名&gt; ( &lt;字段名1&gt;
+                        &lt;类型1&gt; [,..&lt;字段名n&gt;
+                        &lt;类型n&gt;]);</code></p>
+                    <figure class="highlight plain">
+                      <table>
+                        <tr>
+                          <td class="code">
+                            <pre><span class="line">mysql&gt; create table MyClass(</span><br><span class="line">&gt; id int(4) not null primary key auto_increment,</span><br><span class="line">&gt; name char(20) not null,</span><br><span class="line">&gt; sex int(4) not null default &apos;0&apos;,</span><br><span class="line">&gt; degree double(16,2));</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
+                    <h3 id="除表"><a href="#除表" class="headerlink"
+                                                                                                      title="除表"></a>除表
+                    </h3>
+                    <p>命令：<code>drop table &lt;表名&gt;</code> IF EXISTS</p>
+                    <blockquote>
+                      <p>注意：对于一个带分区的表，DROP
+                        TABLE会永久性地取消表定义，取消各分区，并取消储存在这些分区中的所有数据。DROP
+                        TABLE还会取消与被取消的表有关联的分区定义（.par）文件。</p>
+                      <p>对与不存在的表，使用IF EXISTS用于防止错误发生。当使用IF
+                        EXISTS时，对于每个不存在的表，会生成一个NOTE。</p>
+                    </blockquote>
+                    <h3 id="查询表中的数据"><a href="#查询表中的数据" class="headerlink"
+                                                                                                      title="查询表中的数据"></a>查询表中的数据
+                    </h3>
+                    <p>命令： <code>select &lt;字段1，字段2，...&gt; from &lt; 表名 &gt;
+                        where &lt; 表达式
+                        &gt;</code></p>
+                    <figure class="highlight plain">
+                      <table>
+                        <tr>
+                          <td class="code">
+                            <pre><span class="line">mysql&gt; select * from MyClass order by id limit 0,2;</span><br><span class="line"></span><br><span class="line">SELECT * FROM Persons WHERE Year&gt;1965</span><br><span class="line">SELECT * FROM Persons WHERE FirstName=&apos;Bush&apos;</span><br><span class="line"></span><br><span class="line">SELECT * FROM Persons WHERE FirstName=&apos;Thomas&apos; AND LastName=&apos;Carter&apos;</span><br><span class="line"></span><br><span class="line">SELECT * FROM Persons WHERE firstname=&apos;Thomas&apos; OR lastname=&apos;Carter&apos;</span><br><span class="line"></span><br><span class="line">SELECT * FROM Persons WHERE (FirstName=&apos;Thomas&apos; OR FirstName=&apos;William&apos;)</span><br><span class="line">AND LastName=&apos;Carter&apos;</span><br><span class="line"></span><br><span class="line">#我们希望从上面的 &quot;Persons&quot; 表中选取居住在以 &quot;N&quot; 开始的城市里的人</span><br><span class="line">SELECT * FROM Persons WHERE City LIKE &apos;N%&apos;;  </span><br><span class="line">#提示：&quot;%&quot; 可用于定义通配符（模式中缺少的字母）。</span><br><span class="line">#接下来，我们希望从 &quot;Persons&quot; 表中选取居住在以 &quot;g&quot; 结尾的城市里的人：</span><br><span class="line">SELECT * FROM Persons WHERE City LIKE &apos;%g&apos;;</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
+                    <p><strong>这里以后再补充补充</strong>:最简单也是用的最多,实现多样化的地方,性能各有差异</p>
+                    <h3 id="表插入数据"><a href="#表插入数据" class="headerlink"
+                                                                                                      title="表插入数据"></a>表插入数据
+                    </h3>
+                    <p>命令：<code>insert into &lt;表名&gt; [(
+                        &lt;字段名1&gt;[,..&lt;字段名n &gt; ])] values (
+                        值1 )[, ( 值n )]</code></p>
+                    <figure class="highlight plain">
+                      <table>
+                        <tr>
+                          <td class="code">
+                            <pre><span class="line">insert into MyClass values(1,&apos;Tom&apos;,96.45),(2,&apos;Joan&apos;,82.99), (2,&apos;Wang&apos;, 96.59);</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
+                    <blockquote>
+                      <p>注意：insert into每次只能向表中插入一条记录。</p>
+                    </blockquote>
+                    <h3 id="修改表中数据"><a href="#修改表中数据" class="headerlink"
+                                                                                                      title="修改表中数据"></a>修改表中数据
+                    </h3>
+                    <p>语法：<code>update 表名 set 字段=新值,… where 条件</code></p>
+                    <figure class="highlight plain">
+                      <table>
+                        <tr>
+                          <td class="code">
+                            <pre><span class="line">mysql&gt; UPDATE persondata SET age=age+1;</span><br><span class="line">mysql&gt; UPDATE persondata SET age=age*2, age=age+1;</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
+                    <figure class="highlight sql">
+                      <table>
+                        <tr>
+                          <td class="code">
+                            <pre><span class="line"><span class="keyword">UPDATE</span> [<span class="keyword">LOW_PRIORITY</span>] [<span class="keyword">IGNORE</span>] tbl_name <span class="keyword">SET</span> col_name1=expr1 [, col_name2=expr2 ...] [<span class="keyword">WHERE</span> where_definition] [<span class="keyword">ORDER</span> <span class="keyword">BY</span> ...] [<span class="keyword">LIMIT</span> <span class="keyword">row_count</span>]   <span class="comment"># 单表</span></span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
+                    <figure class="highlight sql">
+                      <table>
+                        <tr>
+                          <td class="code">
+                            <pre><span class="line"><span class="keyword">UPDATE</span> [<span class="keyword">LOW_PRIORITY</span>] [<span class="keyword">IGNORE</span>] table_references <span class="keyword">SET</span> col_name1=expr1 [, col_name2=expr2 ...] [<span class="keyword">WHERE</span> where_definition]    ＃　多表</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
+                    <h3 id="增加字段"><a href="#增加字段" class="headerlink"
+                                                                                                      title="增加字段"></a>增加字段
+                    </h3>
+                    <p>命令：<code>**alter table** 表名 **add**字段 类型 其他;</code></p>
+                    <figure class="highlight">
+                      <table>
+                        <tr>
+                          <td class="code">
+                            <pre><span class="line">mysql&gt; alter table MyClass add passtest int(4) default '0'</span><br><span class="line">mysql&gt; alter table employee add index emp_name (name);</span><br><span class="line">mysql&gt; alter table employee add primary key(id);</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
+                    <p><strong>加索引</strong><br>mysql&gt; alter table 表名 add
+                      index 索引名 (字段名1[，字段名2
+                      …]);<br>例子：<code>mysql&gt; alter table employee add index
+                        emp_name
+                        (name);</code></p>
+                    <p><strong>加主关键字的索引</strong><br>mysql&gt; alter table 表名 add
+                      primary key
+                      (字段名);<br>例子：<code>mysql&gt; alter table employee add
+                        primary key(id);</code>
                     </p>
-                    <h4 id="8、优化的查询语句"><a href="#8、优化的查询语句" class="headerlink"
-                                                                                                      title="8、优化的查询语句"></a>8、优化的查询语句
-                    </h4>
-                    <p>绝大多数情况下，使用索引可以提高查询的速度，但如果SQL语句使用不恰当的话，索引将无法发挥它应有的作用。</p>
-                    <p>下面是应该注意的几个方面。</p>
-                    <p>首先，最好是在相同类型的字段间进行比较的操作。</p>
+                    <p><strong>加唯一限制条件的索引</strong><br>mysql&gt; alter table 表名
+                      add unique 索引名
+                      (字段名);<br>例子：<code>mysql&gt; alter table employee add
+                        unique
+                        emp_name2(cardnumber);</code></p>
+                    <p><strong>删除某个索引</strong><br>mysql&gt; alter table 表名 drop
+                      index 索引名;<br>例子：
+                      <code>mysql&gt;alter table employee drop index
+                        emp_name;</code></p>
+                    <p><strong>增加字段：</strong><br><code>mysql&gt; ALTER TABLE
+                        table_name ADD
+                        field_name field_type;</code></p>
+                    <p><strong>修改原字段名称及类型：</strong><br><code>mysql&gt; ALTER
+                        TABLE table_name CHANGE
+                        old_field_name new_field_name field_type;</code></p>
+                    <p><strong>删除字段：</strong><br><code>MySQL ALTER TABLE
+                        table_name DROP
+                        field_name;</code></p>
+                    <h3 id="修改表名"><a href="#修改表名" class="headerlink"
+                                                                                                      title="修改表名"></a>修改表名
+                    </h3>
+                    <p>命令：<code>rename table 原表名 to 新表名;</code></p>
+                    <figure class="highlight plain">
+                      <table>
+                        <tr>
+                          <td class="code">
+                            <pre><span class="line">mysql&gt; rename table MyClass to YouClass;</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
+                    <blockquote>
+                      <p>当你执行 RENAME 时，你不能有任何锁定的表或活动的事务。你同样也必须有对原初表的 ALTER 和
+                        DROP 权限，以及对新表的 CREATE 和
+                        INSERT 权限。</p>
+                      <p>如果在多表更名中，MySQL 遭遇到任何错误，它将对所有被更名的表进行倒退更名，将每件事物退回到最初状态。
+                      </p>
+                      <p>RENAME TABLE 在 MySQL 3.23.23 中被加入。 </p>
+                    </blockquote>
+                    <h3 id="建库和建表的实例1"><a href="#建库和建表的实例1" class="headerlink"
+                                                                                                      title="建库和建表的实例1"></a>建库和建表的实例1
+                    </h3>
+                    <figure class="highlight plain">
+                      <table>
+                        <tr>
+                          <td class="code">
+                            <pre><span class="line">drop database if exists school; //如果存在SCHOOL则删除</span><br><span class="line">create database school; //建立库SCHOOL</span><br><span class="line">use school; //打开库SCHOOL</span><br><span class="line">create table teacher //建立表TEACHER</span><br><span class="line">(</span><br><span class="line">    id int(3) auto_increment not null primary key,</span><br><span class="line">    name char(10) not null,</span><br><span class="line">    address varchar(50) default ‘深圳’,</span><br><span class="line">    year date</span><br><span class="line">); //建表结束</span><br><span class="line"></span><br><span class="line">//以下为插入字段</span><br><span class="line">insert into teacher values(”,’allen’,&apos;大连一中’,&apos;1976-10-10′);</span><br><span class="line">insert into teacher values(”,’jack’,&apos;大连二中’,&apos;1975-12-23′);</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
                     <blockquote>
                       <p>
-                        在MySQL3.23版之前，这甚至是一个必须的条件。例如不能将一个建有索引的INT字段和BIGINT字段进行比较；但是作为特殊的情况，在CHAR类型的字段和VARCHAR类型字段的字段大小相同的时候，可以将它们进行比较。
+                        如果你在mysql提示符键入上面的命令也可以，但不方便调试。<br>1、你可以将以上命令原样写入一个文本文件中，假设为school.sql，然后复制到c:\下，并在DOS状态进入目录,然后键入以下命令：<br>​
+                        <code>mysql -uroot -p密码 &lt;
+                          c:\\school.sql</code><br>如果成功，空出一行无任何显示；如有错误，会有提示。（以上命令已经调试，你只要将//的注释去掉即可使用）。
                       </p>
+                      <p>2、或者进入命令行后使用 <code>mysql&gt; source
+                          c:\\school.sql</code>;
+                        也可以将school.sql文件导入数据库中。</p>
                     </blockquote>
-                    <p>其次，在建有索引的字段上尽量不要使用函数进行操作。</p>
+                    <h3 id="建库和建表的实例2"><a href="#建库和建表的实例2" class="headerlink"
+                                                                                                      title="建库和建表的实例2"></a>建库和建表的实例2
+                    </h3>
+                    <figure class="highlight plain">
+                      <table>
+                        <tr>
+                          <td class="code">
+                            <pre><span class="line">drop database if exists school; //如果存在SCHOOL则删除</span><br><span class="line">create database school; //建立库SCHOOL</span><br><span class="line">use school; //打开库SCHOOL</span><br><span class="line">create table teacher //建立表TEACHER</span><br><span class="line">(</span><br><span class="line">    id int(3) auto_increment not null primary key,</span><br><span class="line">    name char(10) not null,</span><br><span class="line">    address varchar(50) default &apos;&apos;深圳&apos;&apos;,</span><br><span class="line">    year date</span><br><span class="line">); //建表结束</span><br><span class="line"></span><br><span class="line">//以下为插入字段</span><br><span class="line">insert into teacher values(&apos;&apos;&apos;&apos;,&apos;&apos;glchengang&apos;&apos;,&apos;&apos;深圳一中&apos;&apos;,&apos;&apos;1976-10-10&apos;&apos;);</span><br><span class="line">insert into teacher values(&apos;&apos;&apos;&apos;,&apos;&apos;jack&apos;&apos;,&apos;&apos;深圳一中&apos;&apos;,&apos;&apos;1975-12-23&apos;&apos;);</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
                     <blockquote>
                       <p>
-                        例如，在一个DATE类型的字段上使用YEAE()函数时，将会使索引不能发挥应有的作用。所以，下面的两个查询虽然返回的结果一样，但后者要比前者快得多。
-                      </p>
+                        注：在建表中<br>1、将ID设为长度为3的数字字段:int(3)；并让它每个记录自动加一:auto_increment；并不能为空:not
+                        null；而且让他成为主字段<code>primary key</code>。</p>
+                      <p>2、将NAME设为长度为10的字符字段</p>
+                      <p>3、将ADDRESS设为长度50的字符字段，而且缺省值为深圳。</p>
+                      <p>4、将YEAR设为日期字段。</p>
                     </blockquote>
-                    <p>第三，在搜索字符型字段时，我们有时会使用LIKE关键字和通配符，这种做法虽然简单，但却也是以牺牲系统性能为代价的。
-                    </p>
-                    <p>例如下面的查询将会比较表中的每一条记录。</p>
-                    <figure class="highlight sql">
-                      <table>
-                        <tr>
-                          <td class="code">
-                            <pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> books</span><br><span class="line"><span class="keyword">WHERE</span> <span class="keyword">name</span> <span class="keyword">like</span><span class="string">"MySQL%"</span></span><br></pre>
-                          </td>
-                        </tr>
-                      </table>
-                    </figure>
-                    <p>但是如果换用下面的查询，返回的结果一样，但速度就要快上很多：</p>
-                    <figure class="highlight sql">
-                      <table>
-                        <tr>
-                          <td class="code">
-                            <pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> books</span><br><span class="line"><span class="keyword">WHERE</span> <span class="keyword">name</span>＞=<span class="string">"MySQL"</span> andname ＜<span class="string">"MySQM"</span></span><br></pre>
-                          </td>
-                        </tr>
-                      </table>
-                    </figure>
-                    <p>最后，应该注意避免在查询中让MySQL进行自动类型转换，因为转换过程也会使索引变得不起作用。</p>
 
                   </div>
 
@@ -562,8 +783,8 @@
                       <li class="post-copyright-link">
                         <strong>本文链接：</strong>
 
-                        <a href="https://jxiaof.com/2019/03/15/MySQL优化第二篇/"
-                                                                                                        title="MySQL优化第二篇">https://jxiaof.com/2019/03/15/MySQL优化第二篇/</a>
+                        <a href="https://jxiaof.com/2019/03/18/MySQL常用命令/"
+                                                                                                        title="MySQL常用命令">https://jxiaof.com/2019/03/18/MySQL常用命令/</a>
                       </li>
                       <li class="post-copyright-license">
                         <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl"
@@ -586,9 +807,9 @@
                     <div class="post-nav">
                       <div class="post-nav-next post-nav-item">
 
-                        <a href="/2019/03/15/mysql优化/" rel="next"
-                                                                                                        title="MySQL数据库优化">
-                          <i class="fa fa-chevron-left"></i> MySQL数据库优化
+                        <a href="/2019/03/17/2019年3月17日分享/" rel="next"
+                                                                                                        title="2019年3月17日分享">
+                          <i class="fa fa-chevron-left"></i> 2019年3月17日分享
                         </a>
 
                       </div>
@@ -596,11 +817,6 @@
                       <span class="post-nav-divider"></span>
 
                       <div class="post-nav-prev post-nav-item">
-
-                        <a href="/2019/03/17/2019年3月17日分享/" rel="prev"
-                                                                                                        title="2019年3月17日分享">
-                          2019年3月17日分享 <i class="fa fa-chevron-right"></i>
-                        </a>
 
                       </div>
                     </div>
@@ -726,40 +942,116 @@
 
                 <div class="post-toc-content">
                   <ol class="nav">
-                    <li class="nav-item nav-level-4"><a class="nav-link"
-                                                                                                      href="#1、选取最适用的字段属性"><span
+                    <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                                      href="#前言"><span
                                                                                                         class="nav-number">1.</span>
-                        <span class="nav-text">1、选取最适用的字段属性
-                        </span></a></li>
-                    <li class="nav-item nav-level-4"><a class="nav-link"
-                                                                                                      href="#3、使用联合-UNION-来代替手动创建的临时表"><span
-                                                                                                        class="nav-number">2.</span>
-                        <span class="nav-text">3、使用联合(UNION)来代替手动创建的临时表
-                        </span></a></li>
-                    <li class="nav-item nav-level-4"><a class="nav-link"
-                                                                                                      href="#4、事务"><span
-                                                                                                        class="nav-number">3.</span>
-                        <span class="nav-text">4、事务</span></a></li>
-                    <li class="nav-item nav-level-4"><a class="nav-link"
-                                                                                                      href="#5、锁定表"><span
-                                                                                                        class="nav-number">4.</span>
-                        <span class="nav-text">5、锁定表</span></a></li>
-                    <li class="nav-item nav-level-4"><a class="nav-link"
-                                                                                                      href="#6、使用外键"><span
-                                                                                                        class="nav-number">5.</span>
-                        <span class="nav-text">6、使用外键
-                        </span></a></li>
-                    <li class="nav-item nav-level-4"><a class="nav-link"
-                                                                                                      href="#7、使用索引"><span
-                                                                                                        class="nav-number">6.</span>
-                        <span class="nav-text">7、使用索引
-                        </span></a></li>
-                    <li class="nav-item nav-level-4"><a class="nav-link"
-                                                                                                      href="#8、优化的查询语句"><span
-                                                                                                        class="nav-number">7.</span>
-                        <span class="nav-text">8、优化的查询语句
-                        </span></a></li>
+                        <span class="nav-text">前言</span></a>
+                      <ol class="nav-child">
+                        <li class="nav-item nav-level-4"><a class="nav-link"
+                                                                                                          href="#INSERT-INTO-语句"><span
+                                                                                                            class="nav-number">1.0.1.</span>
+                            <span class="nav-text">INSERT
+                              INTO 语句</span></a></li>
+                        <li class="nav-item nav-level-4"><a class="nav-link"
+                                                                                                          href="#UPDATE-语句"><span
+                                                                                                            class="nav-number">1.0.2.</span>
+                            <span class="nav-text">UPDATE
+                              语句</span></a></li>
+                        <li class="nav-item nav-level-4"><a class="nav-link"
+                                                                                                          href="#DELETE-语句"><span
+                                                                                                            class="nav-number">1.0.3.</span>
+                            <span class="nav-text">DELETE
+                              语句</span></a></li>
+                        <li class="nav-item nav-level-4"><a class="nav-link"
+                                                                                                          href="#SELECT-DISTINCT-语句"><span
+                                                                                                            class="nav-number">1.0.4.</span>
+                            <span class="nav-text">SELECT
+                              DISTINCT 语句</span></a></li>
+                      </ol>
+                    </li>
                   </ol>
+                  <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                                    href="#备份数据库"><span
+                                                                                                      class="nav-number">2.</span>
+                      <span class="nav-text">备份数据库</span></a></li>
+                  <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                                    href="#连接MySQL"><span
+                                                                                                      class="nav-number">3.</span>
+                      <span class="nav-text">连接MySQL
+                      </span></a>
+                    <ol class="nav-child">
+                      <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                                        href="#连接本地MySQL"><span
+                                                                                                          class="nav-number">3.1.</span>
+                          <span class="nav-text">连接本地MySQL
+                          </span></a></li>
+                      <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                                        href="#连接远程MySQL"><span
+                                                                                                          class="nav-number">3.2.</span>
+                          <span class="nav-text">连接远程MySQL
+                          </span></a></li>
+                      <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                                        href="#加密连接远程数据库"><span
+                                                                                                          class="nav-number">3.3.</span>
+                          <span class="nav-text">加密连接远程数据库
+                          </span></a></li>
+                    </ol>
+                  </li>
+                  <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                                    href="#修改密码"><span
+                                                                                                      class="nav-number">4.</span>
+                      <span class="nav-text">修改密码</span></a></li>
+                  <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                                    href="#增加新用户"><span
+                                                                                                      class="nav-number">5.</span>
+                      <span class="nav-text">增加新用户</span></a></li>
+                  <li class="nav-item nav-level-2"><a class="nav-link"
+                                                                                                    href="#CURD"><span
+                                                                                                      class="nav-number">6.</span>
+                      <span class="nav-text">CURD</span></a>
+                    <ol class="nav-child">
+                      <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                                        href="#创建表"><span
+                                                                                                          class="nav-number">6.1.</span>
+                          <span class="nav-text">创建表</span></a></li>
+                      <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                                        href="#除表"><span
+                                                                                                          class="nav-number">6.2.</span>
+                          <span class="nav-text">除表</span></a></li>
+                      <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                                        href="#查询表中的数据"><span
+                                                                                                          class="nav-number">6.3.</span>
+                          <span class="nav-text">查询表中的数据
+                          </span></a></li>
+                      <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                                        href="#表插入数据"><span
+                                                                                                          class="nav-number">6.4.</span>
+                          <span class="nav-text">表插入数据</span></a></li>
+                      <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                                        href="#修改表中数据"><span
+                                                                                                          class="nav-number">6.5.</span>
+                          <span class="nav-text">修改表中数据
+                          </span></a></li>
+                      <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                                        href="#增加字段"><span
+                                                                                                          class="nav-number">6.6.</span>
+                          <span class="nav-text">增加字段</span></a></li>
+                      <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                                        href="#修改表名"><span
+                                                                                                          class="nav-number">6.7.</span>
+                          <span class="nav-text">修改表名</span></a></li>
+                      <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                                        href="#建库和建表的实例1"><span
+                                                                                                          class="nav-number">6.8.</span>
+                          <span class="nav-text">建库和建表的实例1
+                          </span></a></li>
+                      <li class="nav-item nav-level-3"><a class="nav-link"
+                                                                                                        href="#建库和建表的实例2"><span
+                                                                                                          class="nav-number">6.9.</span>
+                          <span class="nav-text">建库和建表的实例2
+                          </span></a></li>
+                    </ol>
+                  </li>
                 </div>
 
               </div>

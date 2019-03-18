@@ -2495,7 +2495,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1a61ff;
+  background: #95ffff;
 }
 
 .links-of-blogroll {
@@ -2656,6 +2656,10 @@ pre .javascript .function {
 
 .footer-inner {
   text-align: center;
+}
+
+#animate {
+  animation: iconAnimate 1.33s ease-in-out infinite;
 }
 
 .with-love {

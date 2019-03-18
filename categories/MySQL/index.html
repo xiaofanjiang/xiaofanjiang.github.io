@@ -19,15 +19,15 @@
   <link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
   <link rel="apple-touch-icon" sizes="180x180"
-                                                                                  href="http://pic.yupoo.com/xiaofanjiang/27e50dd5/70fc8778.png?v=7.0.1">
+                                                                                  href="/images/Bob_800px_1211179_easyicon.net.png?v=7.0.1">
 
   <link rel="icon" type="image/png" sizes="32x32"
-                                                                                  href="http://pic.yupoo.com/xiaofanjiang/685f0dd0/3f23ab8a.png?v=7.0.1">
+                                                                                  href="/images/favicon-32x32-next.png?v=7.0.1">
 
   <link rel="icon" type="image/png" sizes="16x16"
-                                                                                  href="http://pic.yupoo.com/xiaofanjiang/57180ea1/c6963039.png?v=7.0.1">
+                                                                                  href="/images/favicon-16x16-next.png?v=7.0.1">
 
-  <link rel="mask-icon" href="http://pic.yupoo.com/xiaofanjiang/27e50dd5/70fc8778.png?v=7.0.1"
+  <link rel="mask-icon" href="/images/Bob_800px_1211179_easyicon.net.png?v=7.0.1"
                                                                                   color="#222">
 
   <script id="hexo.configurations">
@@ -83,7 +83,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="江小凡的博客">
   <meta property="og:url"
-                                                                                  content="https://jxiaof.com/categories/MySQL/index.html">
+                                                                                  content="https://jxiaof.com/categories/mysql/index.html">
   <meta property="og:site_name" content="江小凡的博客">
   <meta property="og:description" content="Life is short">
   <meta property="og:locale" content="zh-CN">
@@ -91,7 +91,7 @@
   <meta name="twitter:title" content="江小凡的博客">
   <meta name="twitter:description" content="Life is short">
 
-  <link rel="canonical" href="https://jxiaof.com/categories/MySQL/">
+  <link rel="canonical" href="https://jxiaof.com/categories/mysql/">
 
   <script id="page.configurations">
     CONFIG.page = {
@@ -100,7 +100,7 @@
 
   </script>
 
-  <title>分类: MySQL | 江小凡的博客</title>
+  <title>分类: mysql | 江小凡的博客</title>
 
   <noscript>
     <style>
@@ -264,7 +264,7 @@
 
               <div id="posts" class="posts-collapse">
                 <div class="collection-title">
-                  <h2>MySQL<small>分类</small>
+                  <h2>mysql<small>分类</small>
                   </h2>
                 </div>
 
@@ -274,44 +274,19 @@
 
                     <h3 class="post-title">
 
-                      <a class="post-title-link" href="/2019/03/15/MySQL优化第二篇/"
+                      <a class="post-title-link" href="/2019/03/18/MySQL常用命令/"
                                                                                                       itemprop="url">
 
-                        <span itemprop="name">MySQL优化第二篇</span>
+                        <span itemprop="name">MySQL常用命令</span>
 
                       </a>
 
                     </h3>
 
                     <div class="post-meta">
-                      <time class="post-time" itemprop="dateCreated" datetime="2019-03-15T22:24:53+08:00"
-                                                                                                      content="2019-03-15">
-                        03-15
-                      </time>
-                    </div>
-
-                  </header>
-                </article>
-
-                <article class="post post-type-categories" itemscope
-                                                                                                itemtype="http://schema.org/Article">
-                  <header class="post-header">
-
-                    <h3 class="post-title">
-
-                      <a class="post-title-link" href="/2019/03/15/mysql优化/"
-                                                                                                      itemprop="url">
-
-                        <span itemprop="name">MySQL数据库优化</span>
-
-                      </a>
-
-                    </h3>
-
-                    <div class="post-meta">
-                      <time class="post-time" itemprop="dateCreated" datetime="2019-03-15T11:45:46+08:00"
-                                                                                                      content="2019-03-15">
-                        03-15
+                      <time class="post-time" itemprop="dateCreated" datetime="2019-03-18T19:32:30+08:00"
+                                                                                                      content="2019-03-18">
+                        03-18
                       </time>
                     </div>
 
@@ -357,7 +332,7 @@
 
                     <a href="/archives/">
 
-                      <span class="site-state-item-count">5</span>
+                      <span class="site-state-item-count">6</span>
                       <span class="site-state-item-name">日志</span>
                     </a>
                   </div>
@@ -366,7 +341,7 @@
 
                     <a href="/categories/">
 
-                      <span class="site-state-item-count">3</span>
+                      <span class="site-state-item-count">4</span>
                       <span class="site-state-item-name">分类</span>
                     </a>
                   </div>
@@ -497,7 +472,7 @@
       notify: false,
       appId: 'IMDsUjlvwlsnibE9ILs4WInH-gzGzoHsz',
       appKey: 'ohVtYaEja2cJVQ6xUHzyI9HM',
-      placeholder: 'ヾﾉ≧∀≦) 瓜子,板凳,小圆桌,聊起来!',
+      placeholder: '你可以设置昵称,邮箱和链接进行留言.',
       avatar: 'mm',
       meta: guest,
       pageSize: '10' || 10,
@@ -871,6 +846,40 @@
         'click',
         function(e) {
           var code = $(this).parent().find('.code').find('.line').map(
+            function(i, e) {
+              return $(e).text();
+            }).toArray().join('\n');
+          var ta = document.createElement('textarea');
+          var yPosition = window.pageYOffset || document.documentElement
+            .scrollTop;
+          ta.style.top = yPosition + 'px'; // Prevent page scroll
+          ta.style.position = 'absolute';
+          ta.style.opacity = '0';
+          ta.readOnly = true;
+          ta.value = code;
+          document.body.appendChild(ta);
+          ta.select();
+          ta.setSelectionRange(0, code.length);
+          ta.readOnly = false;
+          var result = document.execCommand('copy');
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+          ta.blur(); // For iOS
+          $(this).blur();
+        })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+
+  </script>
+
+</body>
+
+</html>
+ode').find('.line').map(
             function(i, e) {
               return $(e).text();
             }).toArray().join('\n');

@@ -19,15 +19,15 @@
   <link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
   <link rel="apple-touch-icon" sizes="180x180"
-                                                                                  href="http://pic.yupoo.com/xiaofanjiang/27e50dd5/70fc8778.png?v=7.0.1">
+                                                                                  href="/images/Bob_800px_1211179_easyicon.net.png?v=7.0.1">
 
   <link rel="icon" type="image/png" sizes="32x32"
-                                                                                  href="http://pic.yupoo.com/xiaofanjiang/685f0dd0/3f23ab8a.png?v=7.0.1">
+                                                                                  href="/images/favicon-32x32-next.png?v=7.0.1">
 
   <link rel="icon" type="image/png" sizes="16x16"
-                                                                                  href="http://pic.yupoo.com/xiaofanjiang/57180ea1/c6963039.png?v=7.0.1">
+                                                                                  href="/images/favicon-16x16-next.png?v=7.0.1">
 
-  <link rel="mask-icon" href="http://pic.yupoo.com/xiaofanjiang/27e50dd5/70fc8778.png?v=7.0.1"
+  <link rel="mask-icon" href="/images/Bob_800px_1211179_easyicon.net.png?v=7.0.1"
                                                                                   color="#222">
 
   <script id="hexo.configurations">
@@ -488,9 +488,6 @@
                     <figure class="highlight plain">
                       <table>
                         <tr>
-                          <td class="gutter">
-                            <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre>
-                          </td>
                           <td class="code">
                             <pre><span class="line">select person_id, @semester_id, 301003, 0, @one_marks, assign_date, @one_marks</span><br><span class="line">          from hom_assignmentinfo   ha, hom_assign_class hac</span><br><span class="line">          where ha.assignment_id = hac.assignment_id</span><br><span class="line">               and ha.assign_date between @time_begin and @time_end</span><br><span class="line">               and ha.assignment_id not in</span><br><span class="line">                    (</span><br><span class="line">                         select haa.assignment_id from hom_assignment_appraise haa, hom_check_assignment hca</span><br><span class="line">                          where haa.appraise_id = hca.appraise_id and haa.if_submit=1</span><br><span class="line">                               and (</span><br><span class="line">                                      (hca.recheck_state = 3004001 and hca.check_result in (3003002, 3003003) )</span><br><span class="line">                                       or</span><br><span class="line">                                      (hca.recheck_state = 3004002 and hca.recheck_result in (3003002, 3003003))</span><br><span class="line">                                    )</span><br><span class="line">                    )</span><br><span class="line">               and ha.assignment_id not in</span><br><span class="line">                    (</span><br><span class="line">                        select assignment_id from hom_assignment_appraise where if_submit=0 and result_type = 0</span><br><span class="line">                    )</span><br><span class="line">               and ha.assignment_id in     </span><br><span class="line">                    (</span><br><span class="line">                         select haa.assignment_id from hom_assignment_appraise haa, hom_check_assignment hca</span><br><span class="line">                          where haa.appraise_id = hca.appraise_id and haa.if_submit=1</span><br><span class="line">                               and hca.check_result in (3003002, 3003003)</span><br><span class="line">                    );</span><br></pre>
                           </td>
@@ -569,9 +566,6 @@
                     <figure class="highlight python">
                       <table>
                         <tr>
-                          <td class="gutter">
-                            <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre>
-                          </td>
                           <td class="code">
                             <pre><span class="line"><span class="comment"># Additional memory pool that is used by InnoDB to store metadata</span></span><br><span class="line"><span class="comment"># information. If InnoDB requires more memory for this purpose it will</span></span><br><span class="line"><span class="comment"># start to allocate it from the OS. As this is fast enough on most</span></span><br><span class="line"><span class="comment"># recent operating systems, you normally do not need to change this</span></span><br><span class="line"><span class="comment"># value. SHOW INNODB STATUS will display the current amount used.</span></span><br><span class="line">innodb_additional_mem_pool_size = <span class="number">64</span>M</span><br><span class="line"><span class="comment"># InnoDB, unlike MyISAM, uses a buffer pool to cache both indexes and</span></span><br><span class="line"><span class="comment"># row data. The bigger you set this the less disk I/O is needed to</span></span><br><span class="line"><span class="comment"># access data in tables. On a dedicated database server you may set this</span></span><br><span class="line"><span class="comment"># parameter up to 80% of the machine physical memory size. Do not set it</span></span><br><span class="line"><span class="comment"># too large, though, because competition of the physical memory may</span></span><br><span class="line"><span class="comment"># cause paging in the operating system. Note that on 32bit systems you</span></span><br><span class="line"><span class="comment"># might be limited to 2-3.5G of user level memory per process, so do not</span></span><br><span class="line"><span class="comment"># set it too high.</span></span><br><span class="line">innodb_buffer_pool_size = <span class="number">5</span>G</span><br></pre>
                           </td>
@@ -734,7 +728,7 @@
 
                     <a href="/archives/">
 
-                      <span class="site-state-item-count">5</span>
+                      <span class="site-state-item-count">6</span>
                       <span class="site-state-item-name">日志</span>
                     </a>
                   </div>
@@ -743,7 +737,7 @@
 
                     <a href="/categories/">
 
-                      <span class="site-state-item-count">3</span>
+                      <span class="site-state-item-count">4</span>
                       <span class="site-state-item-name">分类</span>
                     </a>
                   </div>
@@ -877,7 +871,7 @@
       notify: false,
       appId: 'IMDsUjlvwlsnibE9ILs4WInH-gzGzoHsz',
       appKey: 'ohVtYaEja2cJVQ6xUHzyI9HM',
-      placeholder: 'ヾﾉ≧∀≦) 瓜子,板凳,小圆桌,聊起来!',
+      placeholder: '你可以设置昵称,邮箱和链接进行留言.',
       avatar: 'mm',
       meta: guest,
       pageSize: '10' || 10,
