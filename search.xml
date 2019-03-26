@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
+    <title><![CDATA[os模块和sys模块的区别]]></title>
+    <url>%2F2019%2F03%2F26%2Fos%E6%A8%A1%E5%9D%97%E5%92%8Csys%E6%A8%A1%E5%9D%97%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[os与sys模块的官方解释如下： os: This module provides a portable way of using operating system dependent functionality. 这个模块提供了一种方便的使用操作系统函数的方法。 sys: This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. 这个模块可供访问由解释器使用或维护的变量和与解释器进行交互的函数。 总结: os模块负责程序与操作系统的交互，提供了访问操作系统底层的接口; sys模块负责程序与python解释器的交互，提供了一系列的函数和变量，用于操控python的运行时环境。 os 常用方法 os.remove(‘path/filename’) 删除文件os.rename(oldname, newname) 重命名文件os.walk() 生成目录树下的所有文件名os.chdir(‘dirname’) 改变目录os.mkdir/makedirs(‘dirname’) 创建目录/多层目录os.rmdir/removedirs(‘dirname’) 删除目录/多层目录os.listdir(‘dirname’) 列出指定目录的文件os.getcwd() 取得当前工作目录os.chmod() 改变目录权限os.path.basename(‘path/filename’) 去掉目录路径，返回文件名os.path.dirname(‘path/filename’) 去掉文件名，返回目录路径os.path.join(path1[,path2[,…]]) 将分离的各部分组合成一个路径名os.path.split(‘path’) 返回( dirname(), basename())元组os.path.splitext() 返回 (filename, extension) 元组os.path.getatime\ctime\mtime 分别返回最近访问、创建、修改时间os.path.getsize() 返回文件大小os.path.exists() 是否存在os.path.isabs() 是否为绝对路径os.path.isdir() 是否为目录os.path.isfile() 是否为文件 sys 常用方法 sys.argv 命令行参数List，第一个元素是程序本身路径sys.modules.keys() 返回所有已经导入的模块列表sys.exc_info() 获取当前正在处理的异常类,exc_type、exc_value、exc_traceback当前处理的异常详细信息sys.exit(n) 退出程序，正常退出时exit(0)sys.hexversion 获取Python解释程序的版本值，16进制格式如：0x020403F0sys.version 获取Python解释程序的版本信息sys.maxint 最大的Int值sys.maxunicode 最大的Unicode值sys.modules 返回系统导入的模块字段，key是模块名，value是模块sys.path 返回模块的搜索路径，初始化时使用PYTHONPATH环境变量的值sys.platform 返回操作系统平台名称sys.stdout 标准输出sys.stdin 标准输入sys.stderr 错误输出sys.exc_clear() 用来清除当前线程所出现的当前的或最近的错误信息sys.exec_prefix 返回平台独立的python文件安装的位置sys.byteorder 本地字节规则的指示器，big-endian平台的值是’big’,little-endian平台的值是’little’sys.copyright 记录python版权相关的东西sys.api_version 解释器的C的API版本]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[python进程和线程的区别]]></title>
+    <url>%2F2019%2F03%2F26%2Fpython%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[进程和线程的区别 进程：是并发执行的程序在执行过程中分配和管理资源的基本单位，是一个动态概念，竞争计算机系统资源的基本单位。 线程：是进程的一个执行单元，是进程内部调度实体。比进程更小的独立运行的基本单位。线程也被称为轻量级进程。 一个程序至少一个进程，一个进程至少一个线程。 为什么会有线程？ 每个进程都有自己的地址空间，即进程空间，在网络或多用户换机下，一个服务器通常需要接收大量不确定数量用户的并发请求，为每一个请求都创建一个进程显然行不通（系统开销大响应用户请求效率低），因此操作系统中线程概念被引进。 线程的执行过程是线性的，尽管中间会发生中断或者暂停，但是进程所拥有的资源只为改线状执行过程服务，一旦发生线程切换，这些资源需要被保护起来。进程分为单线程进程和多线程进程，单线程进程宏观来看也是线性执行过程，微观上只有单一的执行过程。多线程进程宏观是线性的，微观上多个执行操作。线程的改变只代表CPU的执行过程的改变，而没有发生进程所拥有的资源的变化。 进程线程的区别： 地址空间：同一进程的线程共享本进程的地址空间，而进程之间则是独立的地址空间。资源拥有：同一进程内的线程共享本进程的资源如内存、I/O、cpu等，但是进程之间的资源是独立的。 一个进程崩溃后，在保护模式下不会对其他进程产生影响，但是一个线程崩溃整个进程都死掉。所以多进程要比多线程健壮。 进程切换时，消耗的资源大，效率高。所以涉及到频繁的切换时，使用线程要好于进程。同样如果要求同时进行并且又要共享某些变量的并发操作，只能用线程不能用进程 执行过程：每个独立的进程程有一个程序运行的入口、顺序执行序列和程序入口。但是线程不能独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。线程是处理器调度的基本单位，但是进程不是。两者均可并发执行。优缺点： 线程执行开销小，但是不利于资源的管理和保护。线程适合在SMP机器（双CPU系统）上运行。 进程执行开销大，但是能够很好的进行资源管理和保护。进程可以跨机器前移。 何时使用多进程，何时使用多线程？ 对资源的管理和保护要求高，不限制开销和效率时，使用多进程。要求效率高，频繁切换时，资源的保护管理要求不是很高时，使用多线程。]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2019年3月23日分享]]></title>
     <url>%2F2019%2F03%2F23%2F2019%E5%B9%B43%E6%9C%8823%E6%97%A5%E5%88%86%E4%BA%AB%2F</url>
     <content type="text"><![CDATA[这几天在做什么? ​ 这几天我买了一双轮滑鞋.很久没有玩了,技术也不是很娴熟.出去转了一圈回来,路上差点摔倒,还是很危险.下次出去尽量不要直接穿鞋出去. ​ 我买这双鞋的初衷是希望自己多出去走走,锻炼身体,多出点汗.平常跑步很累也很枯燥,我不是特别喜欢这种方式的运动.鞋子买回来一天,我一路刷街,刹车,轮子已经磨损不少,很是心疼. 最近想做什么? ​ 最近想换一个房子.主要是我的房子租金还是有点贵,住的楼层在七楼,没有电梯上下楼很不方便.想在公司附近找一个小的房子就行,反正是一个人生活,平时在房间里面的时间很有限. ​ 上回我想搭建一个图片服务器,网上有很多成功的第三方工具,搜索关键字就有一大堆的相关应用方案,我就不做一一推荐了.用第三方的应用目前应对我的博客是绰绰有余的.多储存,可以了解一下阿里相关FastDFS建立分布式存储服务器.杀鸡焉用牛刀,小应用可以直接使用第三方. 关于我的生活 ​ 找房子是一件特别要时间要精力的运动,我今天忙碌一天也没有找到很好的房子,我这边很多江西人做房子中介,精明趋利少真诚,各种服务费,折旧费,管理费,卫生费,防不甚防.房子在签合同一定要多留一个心眼,要看清每一条内容.建议朋友,同事之间多做询问,找房子这些坑大家都遇见过,相互交流一下就能避免很多坑.咸鱼,豆瓣,朋友圈资料留意一下. ​ 对于我来说,总是很难做好一个选择,真的很难,经常去选择到一个相较之下差一点的那一个选择.当我有两份工作的时候我很难选好去做哪一个.平时交谈,口音很重的我,说话看似滔滔不绝,实际也是信马由缰,乱了分寸,果然是实力它不允许我能出口成章,娓娓道来. ​ 在深圳的生活我是比较开心的,这里的气候我很喜欢,这里的空气也很清新,太空也很蓝,周末会经常聚会,一切都感觉很好.身边优秀的人很多,形形色色,林林总总,都很欣赏.这里有一片广阔的天空,我很喜欢深圳. 原图地址]]></content>
       <categories>
